@@ -3,13 +3,13 @@
 
 <?php
     $username = [
-        'username' => 'username',
+        'name' => 'username',
         'id' => 'username',
         'class' => 'form-control'
     ];
 
     $password = [
-        'useranme' => 'password',
+        'name' => 'password',
         'id' => 'password',
         'class' => 'form-control'
     ];

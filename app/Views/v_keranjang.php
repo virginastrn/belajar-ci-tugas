@@ -30,13 +30,13 @@ if (session()->getFlashData('success')) {
             foreach ($items as $index => $item) :
         ?>
                 <tr>
-                    <td><?php echo $item['username'] ?></td>
+                    <td><?php echo $item['name'] ?></td>
                     <td><img src="<?php echo base_url() . "img/" . $item['options']['foto'] ?>" width="100px"></td>
                     <td><?php echo number_to_currency($item['price'], 'IDR') ?></td>
                     <td><input type="number" min="1" name="qty<?php echo $i++ ?>" class="form-control" value="<?php echo $item['qty'] ?>"></td>
-                    <td><?php echo number_to_currency($item['subtotal'], 'IDR') ?></td>
+                    <td><?php echo number_to_currency($item['price'] * $item['qty'], 'IDR') ?></td>
                     <td>
-                        <a href="<?php echo base_url('keranjang/delete/' . $item['rowid'] . '') ?>" class="btn btn-danger">
+                        <a href="<?php echo base_url('keranjang/delete/' . $item['id'] . '') ?>" class="btn btn-danger">
                             <i class="bi bi-trash"></i>
                         </a>
                     </td>
@@ -54,5 +54,8 @@ if (session()->getFlashData('success')) {
 
 <button type="submit" class="btn btn-primary">Perbarui Keranjang</button>
 <a class="btn btn-warning" href="<?php echo base_url() ?>keranjang/clear">Kosongkan Keranjang</a>
+<?php if (!empty($items)) : ?>
+    <a class="btn btn-success" href="<?php echo base_url('keranjang/checkout') ?>">Selesai Belanja</a>
+<?php endif; ?>
 <?php echo form_close() ?>
 <?= $this->endSection() ?>

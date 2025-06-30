@@ -25,7 +25,7 @@ class KategoriProduct extends BaseController
     public function create()
     {
         $dataForm = [
-            'username' => $this->request->getPost('username'),
+            'nama' => $this->request->getPost('nama'),
             'created_at' => date("Y-m-d H:i:s")
         ];
 
@@ -38,7 +38,7 @@ class KategoriProduct extends BaseController
     public function edit($id)
     {
         $dataForm = [
-            'username' => $this->request->getPost('username'),
+            'nama' => $this->request->getPost('nama'),
             'updated_at' => date("Y-m-d H:i:s")
         ];
 

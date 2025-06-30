@@ -30,6 +30,19 @@
                     <i class="bi bi-receipt"></i>
                     <span>Produk</span>
                 </a>
+        <li class="nav-item">
+    <a class="nav-link" href="<?= base_url('/faq') ?>">
+      <i class="bi bi-question-circle"></i> FAQ
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="<?= base_url('/kontak') ?>">
+      <i class="bi bi-envelope"></i> Kontak
+    </a>
+  </li>
+
+</ul>
             </li><!-- End Produk Nav -->
         <?php
         }

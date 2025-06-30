@@ -27,7 +27,7 @@ class Database extends Config
     public $default = [
         'DSN'          => '',
         'hostname'     => 'localhost',
-        'username'     => 'root',
+        'username'     => '',
         'password'     => '',
         'database'     => 'db_ci4',
         'DBDriver'     => 'MySQLi',
@@ -165,7 +165,7 @@ class Database extends Config
     public array $tests = [
         'DSN'         => '',
         'hostname'    => '127.0.0.1',
-        'username'    => 'root',
+        'username'    => '',
         'password'    => '',
         'database'    => 'db_ci4',
         'DBDriver'    => 'SQLite3',

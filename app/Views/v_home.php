@@ -18,7 +18,7 @@ if (session()->getFlashData('success')) {
             <?= form_open('keranjang')?>
             <?php
             echo form_hidden('id', $item['id']);
-            echo form_hidden('username', $item['username']);
+            echo form_hidden('nama', $item['nama']);
             echo form_hidden('harga', $item['harga']);
             echo form_hidden('foto', $item['foto']);
             ?>
