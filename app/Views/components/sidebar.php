@@ -30,11 +30,21 @@
                     <i class="bi bi-receipt"></i>
                     <span>Produk</span>
                 </a>
+            </li><!-- End Produk Nav -->
+        <?php
+        }
+        ?>
+        <li class="nav-item">
+    <a class="nav-link <?php echo (uri_string() == 'profile') ? "" : "collapsed" ?>" href="profile">
+        <i class="bi bi-person"></i>
+        <span>Profile</span>
+    </a>
+</li><!-- End Profile Nav -->
         <li class="nav-item">
     <a class="nav-link" href="<?= base_url('/faq') ?>">
       <i class="bi bi-question-circle"></i> FAQ
     </a>
-  </li>
+  </li><!-- End FAQ Nav -->
 
   <li class="nav-item">
     <a class="nav-link" href="<?= base_url('/kontak') ?>">
@@ -43,10 +53,6 @@
   </li>
 
 </ul>
-            </li><!-- End Produk Nav -->
-        <?php
-        }
-        ?>
     </ul>
 
 </aside>
