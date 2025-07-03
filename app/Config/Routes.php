@@ -14,6 +14,7 @@ $routes->get('/home', 'Home::index');
 $routes->get('/keranjang', 'TransaksiController::index');
 $routes->get('/faq', 'FaqController::index');
 $routes->get('/kontak', 'KontakController::index');
+$routes->get('profile', 'Profile::index');
 
 
 //CRUD Product
@@ -57,3 +58,13 @@ $routes->group('keranjang', ['filter' => 'auth'], function ($routes) {
     $routes->get('checkout', 'TransaksiController::checkout', ['filter' => 'auth']);
 
     $routes->resource('api', ['controller' => 'apiController']);
+
+//diskon
+$routes->group('admin', ['filter' => 'role:admin'], function($routes){
+    $routes->get('diskon', 'DiskonController::index');
+    $routes->get('diskon/create', 'DiskonController::create');
+    $routes->post('diskon/store', 'DiskonController::store');
+    $routes->get('diskon/edit/(:num)', 'DiskonController::edit/$1');
+    $routes->post('diskon/update/(:num)', 'DiskonController::update/$1');
+    $routes->get('diskon/delete/(:num)', 'DiskonController::delete/$1');
+});

@@ -40,18 +40,6 @@
         <span>Profile</span>
     </a>
 </li><!-- End Profile Nav -->
-        <li class="nav-item">
-    <a class="nav-link" href="<?= base_url('/faq') ?>">
-      <i class="bi bi-question-circle"></i> FAQ
-    </a>
-  </li><!-- End FAQ Nav -->
-
-  <li class="nav-item">
-    <a class="nav-link" href="<?= base_url('/kontak') ?>">
-      <i class="bi bi-envelope"></i> Kontak
-    </a>
-  </li>
-
 </ul>
     </ul>
 

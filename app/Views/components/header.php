@@ -15,6 +15,15 @@
         <button type="submit" title="Search"><i class="bi bi-search"></i></button>
     </form>
     </div><!-- End Search Bar -->
+    
+    <?php if (session()->get('nominal_diskon')) : ?>
+    <div class="alert alert-success fw-bold p-2 me-3 mb-0 d-flex align-items-center" role="alert">
+        <i class="bi bi-tags-fill me-2"></i>
+        <div>
+            Diskon Hari Ini: Rp <?= number_format(session()->get('nominal_diskon'), 0, ',', '.') ?>
+        </div>
+    </div>
+    <?php endif; ?>
 
     <nav class="header-nav ms-auto">
     <ul class="d-flex align-items-center">

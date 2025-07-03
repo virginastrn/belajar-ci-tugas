@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\HTTP\ResponseInterface;
 use CodeIgniter\RESTful\ResourceController;
 
-use App\Models\UserModel;
+use App\Models\OrderModel;
 use App\Models\TransactionModel;
 use App\Models\TransactionDetailModel;
 
@@ -19,7 +19,7 @@ class ApiController extends ResourceController
     function __construct()
     {
         $this->apiKey = env('API_KEY');
-        $this->user = new UserModel();
+        $this->user = new OrderModel();
         $this->transaction = new TransactionModel();
         $this->transaction_detail = new TransactionDetailModel();
     }
